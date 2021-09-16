@@ -3,8 +3,6 @@ var pagination = document.querySelector('.pagination')
 var btnTop = document.querySelector('.top-btn')
 var data = [];
 var str = 0;
-var pageTotle = 0;
-var pageRemain = 0;
 
 var xhrURL = 'https://raw.githubusercontent.com/hexschool/KCGTravel/master/datastore_search.json';
 var xhr = new XMLHttpRequest();
@@ -75,40 +73,6 @@ function topscrollTo(e) {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 };
-
-
-
-
-// 這邊往下 是測試 未完成 分頁功能
-
-/* document.querySelector('.choose').addEventListener('change',pageNum,false);
-
-function pageNum(e) {
-    str = 0;
-    for (var i = 0; i < data.length; i++) {
-        if (e.target.value == data[i].Zone) {
-            str += 1;
-        }
-    }
-    // 一頁4個的頁數 無條件進位
-    pageTotle = Math.ceil(str / 4)
-    // 餘數
-    pageRemain = str - (pageTotle-1)*4
-
-    if (str <= 4) {
-        //待做 渲染分頁 並且後面要改出上方的Card渲染資料再存到另外一個變數才能讓分頁渲染
-    }
-} */
-
-// 這邊往上 是測試 未完成 分頁功能
-
-
-
-
-
-
-
-
 
 
 
